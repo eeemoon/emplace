@@ -13,4 +13,4 @@ readme = "README.md"
 include = ["pyproject.toml", "LICENSE"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
