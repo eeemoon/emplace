@@ -29,4 +29,4 @@ print(result) # Hello, WORLD!
 ```
 
 ## Examples
-You can check out some examples (here)[examples]
+You can check out more examples [here](examples).
