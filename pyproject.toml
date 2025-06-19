@@ -14,3 +14,6 @@ include = ["pyproject.toml", "LICENSE"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
