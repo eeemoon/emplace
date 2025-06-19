@@ -46,7 +46,10 @@ class Placeholder:
                 )
 
     def __repr__(self) -> str:
-        return f"<Placeholder pattern='{self.pattern.pattern if self.pattern else None}' handler={self.handler.__qualname__}"
+        return (
+            f"<Placeholder pattern='{self.pattern.pattern if self.pattern else None}',"
+            f" handler={self.handler.__qualname__}>"
+        )
 
     def __eq__(self, value: object) -> bool:
         return (
