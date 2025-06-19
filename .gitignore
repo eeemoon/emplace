@@ -1,0 +1,38 @@
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore Python package files
+.pytest_cache/
+
+# Ignore system and IDE-specific files
+*.pyo
+*.pyd
+.DS_Store
+.vscode/
+.idea/
+*.egg-info/
+*.egg
+dist/
+
+# Ignore virtual environment folders
+venv/
+env/
+virtualenv/
+.venv/
+
+# Ignore sensitive information
+.env
+
+# Ignore database files
+*.sqlite3
+*.db
+
+# Ignore log files
+*.log
+
+# Ignore git extensions
+git-filter-repo
+
+# Ignore test files
+test.py
