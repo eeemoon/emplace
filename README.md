@@ -1,10 +1,10 @@
 [![python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/downloads)
-[![codecov](https://codecov.io/gh/eeemoon/placeholders/graph/badge.svg?token=4CGDOZ7ADZ)](https://codecov.io/gh/eeemoon/placeholders)
+[![codecov](https://codecov.io/gh/eeemoon/emplace/graph/badge.svg?token=4CGDOZ7ADZ)](https://codecov.io/gh/eeemoon/emplace)
 
-# placeholders
-Modern and fast way to process placeholders.
+# emplace
+Modern and easy way to handle placeholders.
 
-This module allows you to define text placeholders and process them dynamically. It's like `str.format()`, but gives you much more flexibility.
+This package allows you to define text placeholders and process them dynamically. It's like `str.format()`, but gives you much more flexibility.
 
 ## Features
 - **Reg**ular **Ex**pressions to find placeholders.
@@ -16,7 +16,7 @@ This module allows you to define text placeholders and process them dynamically.
 
 ## Usage
 ```python
-from placeholders import Formatter, placeholder
+from emplace import Formatter, placeholder
 
 class MyFormatter(Formatter):
     @placeholder(r"upper_(?P<text>.*)")

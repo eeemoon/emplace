@@ -1,6 +1,6 @@
 import pytest
 
-from placeholders import Formatter, Placeholder, Replacement, placeholder
+from emplace import Formatter, Placeholder, Replacement, placeholder
 
 
 class MyFormatter(Formatter):

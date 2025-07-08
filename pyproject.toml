@@ -3,10 +3,10 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "placeholders"
+name = "emplace"
 version = "0.1.0"
-homepage = "https://github.com/eeemoon/placeholders"
-description = "Fast and Pythonic way to process placeholders."
+homepage = "https://github.com/eeemoon/emplace"
+description = "Modern and easy way to handle placeholders."
 authors = ["EeeMoon"]
 license = "MIT"
 readme = "README.md"

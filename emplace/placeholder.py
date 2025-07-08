@@ -1,6 +1,6 @@
 import inspect
 import re
-from typing import Callable, Coroutine
+from typing import Callable
 
 
 class Placeholder:
@@ -83,6 +83,7 @@ class Placeholder:
             raise ValueError("handler is not callable")
         
         self._handler = value
+
 
 def placeholder(
     pattern: str | re.Pattern | None = None

@@ -2,7 +2,7 @@ import asyncio
 
 from colorama import Fore, init
 
-from placeholders import Formatter, Replacement, placeholder
+from emplace import Formatter, Replacement, placeholder
 
 
 class Highlighter(Formatter):
