@@ -31,9 +31,9 @@ class Placeholder:
         handler: Callable, 
         pattern: re.Pattern
     ) -> None:
-        signature = inspect.signature(handler)
+        signature: inspect.Signature = inspect.signature(handler)
         for group_name in pattern.groupindex.keys():
-            param = signature.parameters.get(group_name)
+            param: inspect.Parameter = signature.parameters.get(group_name)
 
             if not param:
                 raise ValueError(f"handler must handle '{group_name}' parameter")
@@ -66,9 +66,9 @@ class Placeholder:
     @pattern.setter
     def pattern(self, value: str | re.Pattern | None) -> None:
         if isinstance(value, str):
-            self._pattern = re.compile(value)
+            self._pattern: re.Pattern = re.compile(value)
         elif isinstance(value, re.Pattern) or value is None:
-            self._pattern = value
+            self._pattern: re.Pattern = value
         else:
             raise TypeError(f"expected 'str', 'Pattern' or 'None', not '{type(value)}'")
 
@@ -82,7 +82,7 @@ class Placeholder:
         if not callable(value):
             raise ValueError("handler is not callable")
         
-        self._handler = value
+        self._handler: Callable = value
 
 
 def placeholder(

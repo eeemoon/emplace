@@ -10,7 +10,7 @@ class Highlighter(Formatter):
 
     @placeholder()
     async def wildcard(self, data: Replacement) -> str:
-        color = self.COLORS[data.depth % len(self.COLORS)] 
+        color: str = self.COLORS[data.depth % len(self.COLORS)] 
    
         return ''.join((
             color,
@@ -23,12 +23,12 @@ class Highlighter(Formatter):
         ))
     
 
-async def main():
+async def main() -> None:
     init()
 
-    formatter = Highlighter()
+    formatter: Highlighter = Highlighter()
 
-    result = await formatter.format("{{example}_{of}} {highlighting_{based_{{on}_{the}}}} {{nesting}_level}")
+    result: str = await formatter.format("{{example}_{of}} {highlighting_{based_{{on}_{the}}}} {{nesting}_level}")
     print(result)
 
 

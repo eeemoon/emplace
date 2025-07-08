@@ -133,7 +133,7 @@ class Formatter:
         if not isinstance(value, str) or not value:
             raise ValueError("'opener' should be a non-empty string")
         
-        self._opener = value
+        self._opener: str = value
 
     @property
     def closer(self) -> str:
@@ -145,7 +145,7 @@ class Formatter:
         if not isinstance(value, str) or not value:
             raise ValueError("'closer' should be a non-empty string")
         
-        self._closer = value
+        self._closer: str = value
 
     @property
     def escape(self) -> str:
@@ -157,7 +157,7 @@ class Formatter:
         if (isinstance(value, str) and not value) and value is not None:
             raise ValueError("'escape' should be a non-empty string or None")
         
-        self._escape = value
+        self._escape: str = value
     
     @property
     def placeholders(self) -> list[Placeholder]:
@@ -200,17 +200,17 @@ class Formatter:
         text: `str`
             Text to format.
         """
-        opener = self.opener
-        closer = self.closer
-        escape = self.escape
-        opener_len = len(opener)
-        closer_len = len(closer)
-        escape_len = len(escape) if escape else 0
-        same = self.opener == self.closer
-        current = text
-        prev_escape = False
+        opener: str = self.opener
+        closer: str = self.closer
+        escape: str = self.escape
+        opener_len: int = len(opener)
+        closer_len: int = len(closer)
+        escape_len: int = len(escape) if escape else 0
+        same: bool = self.opener == self.closer
+        current: str = text
+        prev_escape: bool = False
         stack: list[Replacement] = []
-        index = 0
+        index: int = 0
 
         while index < len(current):
             # check for escape string
