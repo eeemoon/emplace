@@ -1,3 +1,4 @@
+[![pypi](https://img.shields.io/pypi/v/emplace)](https://pypi.org/project/emplace)
 [![python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/downloads)
 [![codecov](https://codecov.io/gh/eeemoon/emplace/graph/badge.svg?token=4CGDOZ7ADZ)](https://codecov.io/gh/eeemoon/emplace)
 
@@ -14,7 +15,14 @@ This package allows you to define text placeholders and process them dynamically
 - Type safety using annotations.
 - No additional dependencies.
 
+## Installation
+To install this module, run the following command:
+```
+pip install emplace
+```
+
 ## Usage
+Example of creating a formatter with single placeholder.
 ```python
 from emplace import Formatter, placeholder
 
