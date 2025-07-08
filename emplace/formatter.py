@@ -248,9 +248,9 @@ class Formatter:
                 # and escape string not found before
                 if not prev_escape:
                     if stack:
-                        open_ph = stack.pop()
-                        start_index = open_ph.start_index
-                        ph = current[start_index + opener_len : index]
+                        open_ph: Replacement = stack.pop()
+                        start_index: int = open_ph.start_index
+                        ph: str = current[start_index + opener_len : index]
 
                         # process the placeholder
                         open_ph.placeholder = ph
@@ -263,7 +263,7 @@ class Formatter:
                             stack[-1].children.append(open_ph)
             
                         # if value is None keep original placeholder
-                        replacement = (
+                        replacement: str = (
                             str(value) 
                             if value is not None else 
                             ''.join((opener, ph, closer))

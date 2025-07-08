@@ -98,7 +98,7 @@ def placeholder(
     """
 
     def wrapper(func: Callable) -> Placeholder:
-        ph = Placeholder(pattern, func)
+        ph: Placeholder = Placeholder(pattern, func)
         ph.__preprocess__ = True
         return ph
 
